@@ -95,6 +95,7 @@ label {
 
 input {
   border: 3px solid #000000;
+  background-color: rgb(6, 42, 91);
   border-style: inset;
   box-sizing: content-box;
   width: 16%;
@@ -105,6 +106,7 @@ input {
   height: 40px;
   line-height: 50px;
   outline: none;
+  font-size: 25px;
 }
 
 textarea {
