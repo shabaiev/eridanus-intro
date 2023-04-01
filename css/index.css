@@ -50,14 +50,14 @@ ul {
 }
 
 p {
-  color: rgb(222, 232, 110);
+  color: rgb(181, 192, 64);
   text-align: center;
   font-size: 30px;
 }
 
 #experience li {
   display: block;
-  color: rgb(179, 196, 32);
+  color: rgb(209, 228, 36);
   margin: 10px;
   padding: 5px;
   border: 3px solid #4d92a3;
@@ -72,7 +72,7 @@ p {
 #skills li {
   list-style: none;
   display: inline-block;
-  color: rgb(212, 234, 14);
+  color: rgb(214, 228, 94);
   margin: 15px;
   padding: 25px;
   border: 3px solid #35cc83;
