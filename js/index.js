@@ -59,39 +59,6 @@ const formatingDate = (date) => {
     return date.slice(0, 10);
 };
 
-
-// let githubRequest = new XMLHttpRequest();
-// githubRequest.open("GET", "https://api.github.com/users/shabaiev/repos");
-
-// githubRequest.send();
-
-// githubRequest.addEventListener("load", (event) => {
-//     let repositories = JSON.parse(githubRequest.responseText);
-//     console.log(repositories);
-
-//     let projectSection = document.getElementById("projects");
-//     let projectList = projectSection.querySelector("ul");
-
-
-//     for (let i = 0; i < repositories.length; i++) {
-//         let project = document.createElement("li");
-//         project.innerHTML = `<a class = "link"  href="${repositories[i].html_url}">${repositories[i].name}</a>`;
-
-
-
-//         let projectDate = document.createElement("p");
-//         projectDate.innerText = `last pushed : ${formatingDate(
-//             repositories[i].pushed_at
-//         )}`;
-
-
-//         projectList.appendChild(project);
-//         project.appendChild(projectDate);
-
-
-
-
-
 // Method for getiing info from GitHub
 fetch("https://api.github.com/users/shabaiev/repos")
     .then((response) => {
