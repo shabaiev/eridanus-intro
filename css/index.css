@@ -1,183 +1,221 @@
-* {
+body {
   background-color: rgb(6, 42, 91);
   font-size: 30px;
-  color: #ffffff;
+  color: #f9f9f9;
   margin: 0;
-  padding: 0;
 }
 
-header {
+.nav {
   display: flex;
-  justify-content: flex-end;
-  padding: 30px 4%;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px 3%;
 }
 
 .nav__links {
+  text-decoration: none;
   list-style: none;
+  font-size: 30px;
+  color: #f9f9f9;
 }
 
-.nav__links li {
-  display: inline-block;
-  padding: 10px 30px;
-  margin-right: 20px;
-}
-
-.nav__links li a {
-  transition: all 0.3s ease 0s;
-  font-size: 25px;
-}
-
-.nav__links li a:hover {
-  color: #edb441;
-  font-size: 32px;
-}
-
-.nav__links li:last-child {
-  margin-right: 0;
+.nav__links:hover {
+  color: #ee8a58;
 }
 
 h1 {
-  font-size: 50px;
-  font-weight: 500;
-  text-align: left;
-  margin-left: 50px;
-  margin-right: 50px;
-  background-color: #141412;
-  color: rgb(184, 198, 30);
-  width: auto;
+  font-size: 40px;
+  font-weight: bold;
   text-align: center;
-}
-
-h2 {
-  color: #ee8a58;
-  font-family: 'Caveat', cursive;
-  font-size: 60px;
-  text-align: left;
-  margin-left: 40px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  justify-content: left;
-}
-
-#experience h2 {
-  margin-top: 60px;
-  text-align: left;
-  align-items: left;
-  justify-content: left;
+  color: #EAFC49;
+  border: 3px solid #35cc83;
+  width: 40%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 h3 {
   color: #ee8a58;
   font-family: 'Caveat', cursive;
   font-size: 60px;
-  text-align: left;
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 40px;
+  height: 1.5rem;
+}
+
+#container_about {
+  display: flex;
+  flex-direction: row;
+}
+
+#avatar {
+  width: 400px;
+  height: 400px;
+  border-radius: 75%;
+  margin-right: 5rem;
+  margin-left: 11rem;
+}
+
+#about-me-text {
+  color: #EAFC49;
+  font-size: 25px;
+  margin-top: 80px;
+  margin-bottom: 100px;
+  padding: 20px 20px;
+  height: 100%;
+  margin-bottom: 20px;
+  border: 2px solid #35cc83;
+  margin-right: 220px;
+}
+
+h2 {
+  color: #ee8a58;
+  font-family: 'Caveat', cursive;
+  font-size: 60px;
+  margin-top: 20px;
+  margin: 0 auto;
+}
+
+#experience h2 {
   margin-top: 30px;
-  margin-left: 40px;
+  text-align: center;
 }
 
-#container-form-message {
-  display: flex;
-  align-items: flex-start;
-  border: 1px solid rgb(255, 255, 255);
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: left;
-  gap: 1px;
-  padding: 40px;
-  margin-bottom: 1px;
-  margin-top: 1px;
-  max-width: 400px;
+.skillset {
+  text-align: center;
   margin-left: 40px;
+  margin-top: 60px;
 }
 
+#leave_message {
+  justify-content: center;
+  margin-left: 650px;
+  margin-right: 0;
+}
 
-#container-form-message .text-input {
-  display: flex;
+#leave_message h2 {
   text-align: left;
-  justify-content: left;
-  gap: 1px;
-  padding-left: 20px;
-  padding-right: auto;
-  width: 70%;
+  margin-left: 50px;
+  margin-bottom: 10px;
 }
 
-#container-form-message .text-message {
+.container-form-message {
   display: flex;
-  padding-left: 20px;
-  padding-right: auto;
-  width: 85%;
+  border: 2px solid #35cc83;
+  flex-wrap: wrap;
+  padding: 50px;
+  width: 350px;
+}
+
+
+.container-form-message .text-input {
+  width: 80%;
+  border-style: inset;
+  box-sizing: content-box;
+  margin-bottom: 1%;
+  height: 40px;
+  line-height: 50px;
+  outline: none;
+  font-size: 25px;
+  font-size: medium;
+  box-shadow: 0 0 0 2px #35cc83;
+  margin-left: 30px;
+  padding-left: 5px;
+}
+
+.container-form-message .text-message {
+  display: flex;
+  padding-left: 5px;
+  width: 80%;
   gap: 10px;
   text-align: left;
+  margin-left: 30px;
 }
 
-#container-form-message #submit-button {
+input,
+textarea {
+  background-color: #c4e7d6;
+}
+
+.container-form-message #submit-button {
   display: flex;
-  width: 40%;
-  align-items: center;
-  justify-content: center;
-  background-color: #28345d;
-  color: #28dde7;
+  background-color: rgb(2, 24, 56);
+  color: #ee8a58;
   font-size: 25px;
-  border: 2px solid #91c6dd;
-  border-radius: 15px;
+  border: 2px solid #f9f9f9;
+  border-radius: 45px;
   font-family: monospace;
-  align-items: center;
+  /* align-items: center; */
+  cursor: pointer;
+  padding: 10px;
+  margin-left: 20px;
+  /* align-items: center; */
+}
+
+.container-form-message #submit-button:hover {
+  border: 2px solid #35cc83;
+  color: white;
 }
 
 #skills ul {
-  text-align: left;
-  margin-left: 40px;
+  text-align: center;
+  margin: 0 auto;
 }
 
-#about p {
-  color: rgb(181, 192, 64);
-  font-size: 25px;
-  word-wrap: break-word;
-  margin-left: 200px;
-  margin-top: 40px;
-  width: 1100px;
-  height: 218px;
-
+#skills li:hover {
+  background-color: rgba(242, 145, 41, 0.916);
 }
 
-.avatar {
-  width: 8em;
-  height: 10em;
-  border-radius: 75%;
-  margin-left: 50px;
-  float: left;
-  margin-top: 25px;
-  margin-right: 25px;
-  margin-bottom: 25px;
-}
 
 .grid-container-exp {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: repeat(2, minmax(0, 4fr));
-  border: 1px solid #35cc83;
-  margin-left: 80px;
-  margin-right: 80px;
-  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1.5px solid #35cc83;
 }
 
-div .item {
-  box-sizing: border-box;
-  border: 1px solid #35cc83;
-  font-size: 22px;
-  padding: 10px;
-  color: rgb(211, 222, 110);
 
+.emphasis {
+  display: flex;
+  color: #ffffff;
+  justify-content: space-between;
+  text-align: left;
+  font-weight: 200;
+  justify-content: right;
+  font-size: 18px;
+}
+
+
+div .item {
+  border: 1.5px solid #35cc83;
+  font-size: 22px;
+  padding: 30px;
+  color: #EAFC49;
+}
+
+#skills h3 {
+  color: #ee8a58;
+  font-family: 'Caveat', cursive;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #skills li {
   list-style: none;
   display: inline-block;
-  color: rgb(214, 228, 94);
+  color: #EAFC49;
   margin: 15px;
   padding: 25px;
   border: 3px solid #35cc83;
-  margin-top: 20px;
+  margin-top: 40px;
   border-width: 3px;
   text-align: center;
   font-size: 30px;
@@ -185,63 +223,39 @@ div .item {
 
 #contact h3 {
   margin-top: 40px;
-}
-
-#contact li {
-  list-style: none;
-  display: inline;
-}
-
-#contact ul {
-  list-style: none;
-  display: inline;
-  padding-left: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 label {
-  color: #d150af;
+  color: #f4efef;
   font-family: 'Indie Flower', cursive;
   font-size: 30px;
-}
-
-input {
-  border: 3px solid #000000;
-  border-style: inset;
-  box-sizing: content-box;
-  width: 16%;
-  padding: 4px 8px;
-  margin-bottom: 1%;
-  padding: 0 20px;
-  min-width: 100px;
-  height: 40px;
-  line-height: 50px;
-  outline: none;
-  font-size: 25px;
-  font-size: medium;
+  margin-left: 30px;
 }
 
 textarea {
   border-style: inset;
   width: 30%;
   border-radius: 10px;
-  box-shadow: 0 0 0 3px #000;
-  border: 5px solid transparent;
+  box-shadow: 0 0 0 3px #35cc83;
   font-size: 20px;
   margin-top: 1%;
   margin-bottom: 1%;
-  text-align: left;
+  text-align: center;
 }
 
 #messages ul {
   display: inline-block;
   list-style: none;
   font-family: Arial, Helvetica, sans-serif;
-  padding-left: 10px;
+  padding-left: 35%;
   padding-right: 10px;
   margin-top: 20px;
   border-width: 3px;
   margin-right: 45px;
-  margin-left: 38px;
+  margin-left: 75px;
   height: 65px;
   line-height: 50px;
   vertical-align: center;
@@ -254,8 +268,21 @@ textarea {
   gap: 5px;
 }
 
+#new-message a {
+  text-decoration: none;
+  color: white;
+  font-style: italic;
+}
+
+#new-message a:hover {
+  font-weight: bold;
+  border: 3px solid #35cc83;
+}
+
+
 #messages h2 {
   margin-top: 40px;
+  text-align: center;
 }
 
 #messages li {
@@ -266,160 +293,271 @@ textarea {
 
 #remove-button {
   background-color: #a42323;
-  color: #d5d2d2;
-  font-family: monospace;
+  color: #ffffff;
   font-size: 15px;
   border-radius: 45px;
-  height: 65%;
+  height: 75%;
   bottom: 10%;
-  padding-top: 3px;
-  padding-right: 3px;
-  padding-bottom: 3px;
-  padding-left: 3px;
+  padding: 10px;
   margin-right: 8px;
   width: 80px;
   margin-bottom: 10px;
 }
 
-footer p {
-  display: block;
-  background-color: #616f90;
-  border: 1px solid;
-  border-radius: 10px;
-  align-items: left;
-  justify-content: left;
-  text-align: center;
-  padding: 7px;
-  color: white;
-  width: 20%;
-  font-size: 25px;
-  margin-left: 40px;
-  margin-bottom: 10px;
-  margin-top: 50px;
+#remove-button:hover {
+  background-color: #d72b2b;
+  border: 1px solid white;
 }
 
-@media (max-width: 600px) {
+footer>p {
+  color: white;
+  font-size: 25px;
+  font-weight: 400;
+  margin: 5px;
+  margin-left: 25px;
+  font-family: cursive;
+}
 
-  h1 {
-    font-size: 30px;
-    position: relative;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: 1%;
-    width: 80%;
-  }
+#projects li {
+  border: 2px solid #35cc83;
+  color: #EAFC49;
+  font-size: 25px;
+  padding: 0;
+}
 
-    .nav__links li,
-    .nav__links li a {
-      display: none;
-    }
+.link {
+  text-decoration: none;
+  color: #ffffff;
+  margin: 10px;
+}
 
-  #container-form-message {
-    margin-left: 0px;
-    margin-right: 0px;
-    justify-content: center;
-    border: 0;
-    margin-bottom: 50%;
-  }
+#projects h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 1px;
+}
 
-  #messages h2 {
-    text-align: left;
-    justify-content: left;
-  }
+#contact_me {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1%;
+}
 
-  #about h3 {
-    top: 10%;
-    transform: translate(0%, -50%);
-    margin-top: 30%;
-    text-align: center;
-    margin-bottom: 10%;
-    margin-left: 28%;
-  }
+.contactMe {
+  width: 50px;
+  height: 50px;
+  color: rgb(6, 42, 91);
+}
 
-  #skills h3 {
-    text-align: center;
-    align-items: center;
-    align-items: center;
-  }
+.contactMe:hover {
+  border: 1.2px solid #ffffff;
+  border-radius: 80%;
+}
 
-  footer p {
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    margin-top: 100px;
-  }
 
-  #remove-button {
-    margin-left: 0;
+@media only screen and (max-width: 820px) {
+  #container_about {
+    display: flex;
+    flex-direction: column;
     margin-right: 0;
+    margin-left: 0;
   }
 
-  #skills li {
-    font-size: 25px;
-    display: grid;
-    list-style: none;
-  }
-
-  #experience h2 {
-    text-align: center;
-    margin-left: 30px;
-    align-items: center;
-  }
-
-  #messages li {
-    font-size: 5px;
-    inline-size: 250px;
-    gap: 30px;
-    justify-content: space-between;
-    overflow: auto;
-  }
-
-  .avatar {
-    border-radius: 75%;
-    position: relative;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: 45%;
-    margin-bottom: 45%;
-  }
-  
-
-   #about p {
-    display: inline-block; 
-    word-wrap: break-word; 
-    width: 360px;
-    height: 250px;
-    position: relative;
-    left: 20%;
-    text-align: justify;
-    justify-content: center;
-    align-items: center;
-    transform: translate(-50%, -10%);
-    margin-top: -50%;
-    margin-bottom: 80%;
-    margin-left: 50%;
-  } 
-
-  section {
-    padding: 1%;
-    align-items: center;
-  }
-} 
-
-@media (min-width: 768px) {
   .nav__links li {
     display: inline;
     justify-content: space-between;
     padding: 25px 0px;
   }
 
-    #about p {
-      margin-right: 10%;
-      width: 900px;
-      text-align: left;
-      right: 20%;
+  #about-me-text {
+    color: #EAFC49;
+    font-size: 25px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    padding: 20px 20px;
+    height: 100%;
+    margin-bottom: 20px;
+    border: 2px solid #35cc83;
+    width: 50%;
+    margin-left: 23%;
+  }
 
-    } 
+
+
+  #container_about>#avatar {
+    width: 300px;
+    height: 400px;
+    border-radius: 75%;
+    margin-left: 33%;
+  }
+
+  #skills h3 {
+    margin-bottom: 5%;
+  }
+
+  #projects {
+    font-size: medium;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    margin-left: 20%;
+    margin-right: 0;
+  }
+
+  #projects h2 {
+    text-align: center;
+    justify-content: center;
+    margin-right: 23%;
+
+  }
+
+  #leave_message h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 3.8rem;
+  }
+
+  #leave_message {
+    width: fit-content;
+    margin-left: 180px;
+  }
+
+  #messages ul {
+    margin-left: 0px;
+    margin-right: 70px;
+  }
 }
+
+
+
+@media only screen and (max-width: 450px) {
+  .nav__links li {
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 250px;
+    margin-right: 250px;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 30px;
+    top: 20%;
+    margin-top: 1%;
+    margin-left: 50%;
+    margin-right: 50px;
+    align-items: center;
+    width: 70%;
+  }
+
+  #container_about #avatar {
+    margin-left: 50%;
+  }
+
+  #about-me-text {
+    margin-left: 50%;
+    width: 400px;
+    height: 20%;
+    margin-left: 30%;
+  }
+
+  #experience h2 {
+    margin-top: 40px;
+    text-align: center;
+    margin-left: 55%;
+  }
+
+  .grid-container-exp {
+    display: flex;
+    flex-direction: column;
+    margin-left: 150px;
+    margin-top: 20px;
+    margin-right: auto;
+  }
+
+
+  .grid-container-exp .item {
+    font-size: medium;
+  }
+
+  #skills h3 {
+    margin-left: 70%;
+  }
+
+  #skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    width: 85px;
+  }
+
+  #skills li {
+    justify-content: center;
+    align-items: center;
+    margin-left: 4.2rem;
+  }
+
+  h3 {
+    color: #ee8a58;
+    font-family: 'Caveat', cursive;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 70%;
+    height: 1.5rem;
+  }
+
+  #projects h2 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 40%;
+  }
+
+  #projects {
+    font-size: medium;
+    justify-content: center;
+    align-items: center;
+    margin-left: 35%;
+    margin-right: 0;
+  }
+
+  #leave_message h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 15.8px;
+    width: fit-content;
+  }
+
+  .container-form-message {
+    align-items: center;
+    margin-left: -15%;
+
+  }
+
+
+  #messages h2 {
+    text-align: center;
+    margin-left: 55%;
+  }
+
+  .contactMe {
+    justify-content: center;
+    margin-left: 80px;
+    margin-right: 0;
+  }
+
+    footer {
+      margin-left: 25px;
+    }
+  }
