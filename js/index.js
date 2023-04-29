@@ -12,14 +12,14 @@ const skills = ['JavaScript',
     'Cypress',
     'Webdriver IO',
     'GitHub']
-    
+
 const skillsSection = document.getElementById("skills")
 const skillsList = skillsSection.querySelector("ul");
 
 for (let i = 0; i < skills.length; i++) {
     let skill = document.createElement("li")
     skill.innerText = skills[i],
-    skillsList.appendChild(skill)
+        skillsList.appendChild(skill)
 }
 
 const messageForm = document.forms.formID;
@@ -54,51 +54,65 @@ messageForm.addEventListener("submit", (event) => {
     messageForm.reset();
 })
 
-
+// function to fix date format from GitHub
 const formatingDate = (date) => {
     return date.slice(0, 10);
 };
 
+// Method for getiing info from GitHub
+fetch("https://api.github.com/users/shabaiev/repos")
+    .then((response) => {
+        if (!response.ok) {
+            throw new Error(response.statusText);
+        }
+        return response.json();
+    })
+    .then((repositories) => {
 
-let githubRequest = new XMLHttpRequest();
-githubRequest.open("GET", "https://api.github.com/users/shabaiev/repos");
+        // selecting ul in projects section
+        const projectSection = document.getElementById('projects');
+        const projectList = projectSection.querySelector('ul')
 
-githubRequest.send();
+        //iterating over repo array to display repo data
+        for (let i = 0; i < repositories.length; i++) {
+            const project = document.createElement('li');
 
-githubRequest.addEventListener("load", (event) => {
-    let repositories = JSON.parse(githubRequest.responseText);
-    console.log(repositories);
+            const projectLink = document.createElement('a');
+            projectLink.innerText = repositories[i].name;
+            projectLink.href = repositories[i].html_url;
+            projectLink.target = "_blank";
 
-    let projectSection = document.getElementById("projects");
-    let projectList = projectSection.querySelector("ul");
-
-
-    for (let i = 0; i < repositories.length; i++) {
-        let project = document.createElement("li");
-        project.innerHTML = `<a class = "link"  href="${repositories[i].html_url}">${repositories[i].name}</a>`;
-       
-
-
-        let projectDate = document.createElement("p");
-        projectDate.innerText = `last pushed : ${formatingDate(
-            repositories[i].pushed_at
-        )}`;
+            let projectDate = document.createElement("p");
+            projectDate.innerText = `last pushed : ${formatingDate(
+                repositories[i].pushed_at
+            )}`;
 
 
-        projectList.appendChild(project);
-        project.appendChild(projectDate);
+            project.appendChild(projectLink);
+            project.appendChild(projectDate);
+            projectList.appendChild(project);
 
+            //styling
+            // project.classList.add('projectStyle');
+            project.style.listStyleType = "none";
+            project.style.marginLeft = "10%";
+            project.style.marginRight = "5%";
+            project.style.padding = "5px";
+            project.style.marginTop = "5px";
+            project.style.marginBottom = "5px";
+            project.style.width = "250px";
+            project.style.textAlign = "center";
+            projectDate.style.fontSize = "20px";
+            projectDate.style.fontStyle = "italic";
+            project.style.display = "inline-block";
 
-        project.style.listStyleType = "none";
-        project.style.marginLeft = "10%";
-        project.style.marginRight = "5%";
-        project.style.padding = "5px";
-        project.style.marginTop = "5px";
-        project.style.marginBottom = "5px";
-        project.style.width = "250px";
-        project.style.textAlign = "center";
-        projectDate.style.fontSize = "20px";
-        projectDate.style.fontStyle = "italic";
-        project.style.display = "inline-block";
-    }
-});
+        }
+    })
+    .catch((error) => {
+        console.warn(error);
+        const projectSection = document.getElementById('projects');
+        const errorMessage = document.createElement('h1');
+        errorMessage.innerText = `There was an error! Github error message: ${error.message}`;
+        projectSection.appendChild(errorMessage);
+    });
+
